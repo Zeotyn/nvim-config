@@ -1,5 +1,5 @@
 return {
-  'nvim-treesitter/nvim-treesitter', 
+  'nvim-treesitter/nvim-treesitter',
   build = ":TSUpdate",
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects'
@@ -7,7 +7,7 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup {
       ensure_installed = {
-        'c', 
+        'c',
         'css',
         'gitcommit',
         'gitignore',
@@ -40,10 +40,10 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "gnn", -- set to `false` to disable one of the mappings
-          node_incremental = "grn", -- @Todo: Change those to more useable ones.
-          scope_incremental = "grc",
-          node_decremental = "grm",
+          init_selection = '<c-space>',
+          node_incremental = '<c-space>',
+          scope_incremental = '<c-s>',
+          node_decremental = '<M-space>',
         },
       },
       indent = {
@@ -54,6 +54,8 @@ return {
           enable = true,
           lookahead = true,
           keymaps = {
+            ['aa'] = '@parameter.outer',
+            ['ia'] = '@parameter.inner',
             ['af'] = '@function.outer',
             ['if'] = '@function.inner',
             ['ac'] = '@class.outer',
@@ -76,6 +78,26 @@ return {
           peek_definition_code = {
             ["<leader>df"] = "@function.outer",
             ["<leader>dF"] = "@class.outer",
+          },
+        },
+        move = {
+          enable = true,
+          set_jumps = true, -- whether to set jumps in the jumplist
+          goto_next_start = {
+            [']m'] = '@function.outer',
+            [']]'] = '@class.outer',
+          },
+          goto_next_end = {
+            [']M'] = '@function.outer',
+            [']['] = '@class.outer',
+          },
+          goto_previous_start = {
+            ['[m'] = '@function.outer',
+            ['[['] = '@class.outer',
+          },
+          goto_previous_end = {
+            ['[M'] = '@function.outer',
+            ['[]'] = '@class.outer',
           },
         },
       }

@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { import = 'plugins' },
-  { import = 'plugins.lsp' },
-  { import = 'plugins.editor' },
-  { import = 'plugins.coding' },
+  { import = 'zeotyn.plugins' },
+  { import = 'zeotyn.plugins.lsp' },
+  { import = 'zeotyn.plugins.editor' },
+  { import = 'zeotyn.plugins.coding' },
 })
