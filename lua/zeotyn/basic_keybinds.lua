@@ -60,5 +60,6 @@ keymap('n', 'gd', '<C-]> | :lua vim.lsp.buf.definition<cr>', { desc = 'Go to def
 keymap('n', 'gD', vim.lsp.buf.declaration, { desc = 'Go to declaration' })
 keymap('n', 'gI', vim.lsp.buf.implementation, { desc = 'Go to implementation' })
 keymap('n', 'gt', vim.lsp.buf.type_definition, { desc = 'Go to type definition' })
+keymap('n', 'gr', vim.lsp.buf.references, { desc = 'Go to type definition' })
 keymap('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action' })
 keymap('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })

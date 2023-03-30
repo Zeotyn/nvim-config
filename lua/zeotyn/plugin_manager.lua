@@ -16,4 +16,5 @@ require("lazy").setup({
   { import = 'zeotyn.plugins.lsp' },
   { import = 'zeotyn.plugins.editor' },
   { import = 'zeotyn.plugins.coding' },
+  { import = 'zeotyn.plugins.util' },
 })
