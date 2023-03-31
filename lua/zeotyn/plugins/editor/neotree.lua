@@ -44,15 +44,74 @@ return {
       close_if_last_window = true,
       enable_git_status = true,
       enable_diagnostics = true,
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-          hide_hidden = false
+      sources = {
+        "filesystem",
+        "git_status",
+        "diagnostics",
+      },
+      source_selector = {
+        winbar = true,
+        statusline = false, -- toggle to show selector on statusline
+        content_layout = "center",
+        tabs_layout = "equal",
+        tab_labels = {
+          filesystem = "  ",
+          git_status = "  ",
+          diagnostics = " 裂",
         },
-        follow_current_file = true,
-        group_empty_dirs = true,
-        use_libuv_file_watcher = true
+      },
+      default_component_config = {
+        icon = {
+          folder_closed = "",
+          folder_open = "",
+          folder_empty = "",
+          default = " ",
+          highlight = "NeoTreeFileIcon",
+        },
+        buffers = {
+          follow_current_file = true, -- This will find and focus the file in the active buffer every
+          -- time the current file is changed while the tree is open.
+          group_empty_dirs = true,    -- when true, empty folders will be grouped together
+          show_unloaded = true,
+        },
+        filesystem = {
+          filtered_items = {
+            hide_dotfiles = false,
+            hide_gitignored = false,
+            hide_hidden = false
+          },
+          follow_current_file = true,
+          group_empty_dirs = true,
+          use_libuv_file_watcher = true,
+          hijack_netrw_behavior = "open_default",
+        },
+        indent = {
+          indent_size = 2,
+          padding = 0, -- extra padding on left hand side
+          -- indent guides
+          with_markers = true,
+          indent_marker = "│",
+          last_indent_marker = "└", -- └
+          -- indent_marker = "▏",
+          -- last_indent_marker = "▏",
+          highlight = "NeoTreeIndentMarker",
+          -- expander config, needed for nesting files
+          with_expanders = false, -- if nil and file nesting is enabled, will enable expanders
+          -- expander_collapsed = "",
+          -- expander_expanded = "",
+
+          expander_collapsed = "",
+          expander_expanded = "",
+          expander_highlight = "NeoTreeExpander",
+        },
+        diagnostics = {
+          highlights = {
+            hint = "DiagnosticSignHint",
+            info = "DiagnosticSignInfo",
+            warn = "DiagnosticSignWarn",
+            error = "DiagnosticSignError",
+          },
+        },
       }
     })
   end
