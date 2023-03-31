@@ -31,6 +31,8 @@ return {
         'typescript',
         'vim',
         'vue',
+        'markdown',
+        'markdown_inline'
       },
       auto_install = true,
       highlight = {
