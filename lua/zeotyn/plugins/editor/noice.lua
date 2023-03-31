@@ -6,10 +6,18 @@ return {
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
-          ["vim.lsp.util.convert_input_to_markdown_lines"] = false,
-          ["vim.lsp.util.stylize_markdown"] = false,
-          ["cmp.entry.get_documentation"] = false,
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true,
           ["vim.lsp.handlers.signature_help.enabled"] = false
+        },
+        cmdline_popup = {
+          border = {
+            style = { "▄", "▄", "▄", "█", "▀", "▀", "▀", "█", "1" }, -- [ top top top - right - bottom bottom bottom - left ]
+            style = "",
+            padding = { 0, 0 },
+          },
+          filter_options = {},
         },
       },
     })
