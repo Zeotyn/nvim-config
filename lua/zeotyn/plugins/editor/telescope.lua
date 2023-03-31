@@ -6,6 +6,7 @@ return {
     { '<leader>ff', '<cmd>Telescope find_files<cr>',                desc = 'Find in files' },
     { '<leader>fg', '<cmd>Telescope live_grep<cr>',                 desc = 'Find by grep' },
     { '<C-e>',      '<cmd>Telescope buffers<cr>',                   desc = 'Find in opened files' },
+    { '<leader>fb', '<cmd>Telescope buffers<cr>',                   desc = 'Find in opened files' },
     { '<leader>fe', '<cmd>Telescope oldfiles<cr>',                  desc = 'Find in recently files' },
     { '<leader>fh', '<cmd>Telescope help_tags<cr>',                 desc = 'Find in help tags' },
     { '<leader>fd', '<cmd>Telescope diagnostics<cr>',               desc = 'Find in diagnostic messages' },

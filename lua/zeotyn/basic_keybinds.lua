@@ -33,10 +33,10 @@ keymap("n", "<C-k>", "<C-w>k", { desc = 'Switch to up window' })
 keymap("n", "<C-l>", "<C-w>l", { desc = 'Switch to right window' })
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", { desc = 'Resize window to the up' })
-keymap("n", "<C-Down>", ":resize -2<CR>", { desc = 'Resize window to the down' })
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", { desc = 'Resize window to the left' })
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", { desc = 'Resize window to the right' })
+keymap("n", "<A-Up>", ":resize +2<CR>", { desc = 'Resize window to the up', silent = true })
+keymap("n", "<A-Down>", ":resize -2<CR>", { desc = 'Resize window to the down', silent = true })
+keymap("n", "<A-Left>", ":vertical resize -2<CR>", { desc = 'Resize window to the left', silent = true })
+keymap("n", "<A-Right>", ":vertical resize +2<CR>", { desc = 'Resize window to the right', silent = true })
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", { desc = 'Go to next buffer' })
