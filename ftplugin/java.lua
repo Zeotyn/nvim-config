@@ -89,13 +89,13 @@ local config = {
       references = {
         includeDecompiledSources = true,
       },
-      -- format = {
-      --   enabled = true,
-      --   settings = {
-      --     url = vim.fn.stdpath "config" .. "/lang-servers/intellij-java-google-style.xml",
-      --     profile = "GoogleStyle",
-      --   },
-      -- },
+      format = {
+        enabled = true,
+        settings = {
+          url = vim.fn.stdpath "config" .. "/lang-servers/intellij-java-google-style.xml",
+          profile = "GoogleStyle",
+        },
+      },
     },
     signatureHelp = { enabled = true },
     completion = {

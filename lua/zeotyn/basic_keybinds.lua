@@ -6,9 +6,10 @@ vim.g.maplocalleader = ' '
 
 
 
-keymap('n', '<leader>w', '<cmd>write<cr>', { desc = 'Write file' })
+keymap('n', '<leader>ww', '<cmd>write<cr>', { desc = 'Write file' })
+keymap('n', '<leader>wa', '<cmd>wall<cr>', { desc = 'Write file' })
 keymap('n', '<leader>qq', '<cmd>quit<cr>', { desc = 'Quit' })
-keymap('n', '<leader>qw', '<cmd>Bdelete<cr>', { desc = 'Quit file' })
+keymap('n', '<leader>qw', '<cmd>Bdelete!<cr>', { desc = 'Quit file' })
 keymap('n', '<leader>qa', '<cmd>quitall<cr>', { desc = 'Quit vim' })
 
 -- Remap for dealing with word wrap
@@ -19,6 +20,7 @@ keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 keymap({ 'n', 'x', 'v' }, '<C-x>', '"+x', { desc = 'Cut into clipboard' })
 keymap({ 'n', 'x', 'v' }, 'x', '"_x', { desc = 'Delete without modifying internal memory' })
 keymap({ 'n', 'x', 'v' }, 'd', '"_d', { desc = 'Delete without modifying internal memory' })
+keymap({ 'n', 'x', 'v' }, 'c', '"_c', { desc = 'Delete without modifying internal memory' })
 keymap({ 'n', 'x', 'v', 'i' }, '<C-z>', 'u')
 keymap({ 'n', 'x', 'v' }, '<leader>c', 'none')
 
